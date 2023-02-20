@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link href="css/normalize.css" rel="normalize" type="text/css">
-    <link href="css/small.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet" type="text/css">
 </head>
 <body>
@@ -23,7 +23,7 @@
                 <input type="checkbox" class="toggle-menu">
                 <div class="hamburger"></div>
                 <ul class="menu">
-                    <li><a href="index.html">work</a></li>
+                    <li><a href="#work">work</a></li>
                     <li><a href="fun.html">fun</a></li>
                     <li><a href="about.html">about</a></li>
                 </ul>
@@ -31,49 +31,42 @@
         </nav>
     </header>
 <div class="intro"> <!--Fun doodle of myself + short introduction of who I am and what I'm studying.-->
-    <section>
+    <div>
         <img class="introimg"
-        alt="intro img"
-        height="400"
-        width="400"
-        src="assets/portfolioicon.png"/>
-    </section>
-    <section>
+        src="assets/portfolioicon.png"
+        alt="intro img"/>
+    </div>
+    <div>
         <img class="introtext"
-        alt="intro text"
-        height="400"
-        width="400"
-        src="assets/portfoliointro.png"/>
-    </section>
+        src="assets/portfoliointro.png"
+        alt="intro text"/>
+    </div>
 </div>
-<div class="casestudies"> 
     <section class="check-work" id="work">
         <h3>check out my work below</h3>
     </section>
     <section class="arrow">
         <h3>&#8595;</h3>
     </section>
-    <!--Clicking on the cover of each project will bring the user to the respective case study.-->
-    <section class="case-study-1">
+<div class="casestudies">  <!--Clicking on the cover of each project will bring the user to the respective case study.-->
+    <div class="case-study-1">
         <a href="casestudy1.html"><img
         alt="casestudy1"
-        width="375"
-        src="assets/cafeclovercover.png"
+        src="assets/cafeclovertn.png"
         /></a>
-    </section>
-    <section>
-        <h2>Cafe Clover Website Redesign</h2>
-    </section>
-    <section class="case-study-2">
+        <section>
+            <h2>Cafe Clover Website Redesign</h2>
+        </section>
+    </div>
+    <div class="case-study-2">
         <a href="casestudy2.html"><img
-        alt="casestudy1"
-        width="375"
-        src="assets/catruncover.png"
+        alt="casestudy2"
+        src="assets/catruntn.png"
         /></a>
-    </section>
-    <section>
-        <h2>Cat Run Digital Game</h2>
-    </section>
+        <section>
+            <h2>Cat Run Digital Game</h2>
+        </section>
+        </div>
 </div>
 <footer class="footer">
     <section>

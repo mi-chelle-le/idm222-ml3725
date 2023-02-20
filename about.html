@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
     <link href="css/normalize.css" rel="normalize" type="text/css">
-    <link href="css/small.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet" type="text/css">
 </head>
 <body>
@@ -31,21 +31,35 @@
         </nav>
 </header>
 <div class="about">
-<section> <!--A short introduction to who I am, along with button links to my email and linkedin.-->
-    <img
-    alt="portrait"
-    style="width:100%"
-    src="assets/portfolioicon.png"
-    />
-    <h3>Nice to meet you!
-        My name's Michelle.</h3>
+<div class="aboutintro"> <!--A short introduction to who I am, along with button links to my email and linkedin.-->
+    <img class="aboutimg"
+        src="assets/polaroidplaceholder.png"
+        alt="portrait">
+   <!--<picture class="aboutimg">
+        <source
+          media="(min-width: 1100px)"
+          srcset="assets/aboutintro-large.png"
+        />
+        <source
+          media="(min-width: 900px)"
+          srcset="assets/aboutintro-medium.png"
+        />
+        <img
+          src="assets/aboutintro-small.png"
+          alt="aboutimg"
+        />
+      </picture> --> 
+</div>
+<div>
+    <h3>Nice to meet you!</h3>
+    <h3><span>My name's Michelle.</span></h3>
     <p>I&#39;m a Chinese-Cambodian UX design student from Philadelphia currently studying at Drexel University! Design has always piqued my interest; I&#39;m fascinated with the process and the reasoning behind various design choices. I love picking up on new skills and discovering how to apply new methods to my creatives works.</p>
     <p>Outside of design, I enjoy video editing, animating, and the occasional painting. When I&#39;m not juggling my assignments, you can typically find me trying foods with my friends or snuggled up at home watching a show. Once I find the free time, I want to get into crocheting and more motion graphics.</p>
-</section>
-<section class="contact">
-    <a target="_blank" href="mailto:ml3725@drexel.edu"><i class="fa fa-envelope"></i></a>
-    <a target="_blank" href="https://www.linkedin.com/in/mi-chelle-le/"><i class="fab fa-linkedin-in"></i></a>
-</section>
+    <section class="contact">
+        <a target="_blank" href="mailto:ml3725@drexel.edu"><i class="fa fa-envelope"></i></a>
+        <a target="_blank" href="https://www.linkedin.com/in/mi-chelle-le/"><i class="fab fa-linkedin-in"></i></a>
+    </section>
+</div>
 </div>
 <div class="resume"> <!--Start of resume section. If user needs a PDF version of my resume, they can click the button to obtain that. Otherwise, the whole resume can be read on this page.-->
 <section>
