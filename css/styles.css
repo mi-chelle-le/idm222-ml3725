@@ -1,0 +1,513 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Poppins:wght@500&display=swap');
+
+:root {
+    --cream: /*#fefaf6*/ #fff7ef;
+    --moss: #666E2F;
+    --honey: #EFBD80;
+    --walnut: #351910;
+    --charcoal: #252525;
+
+    --font-serif: "Poppins", "Montserrat", Verdana, Tahoma, serif;
+    --font-bold: "Staatliches", var(--font-serif);
+}
+
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--cream);
+    font-family: var(--font-serif);
+    color:#252525;
+    margin: 100;
+    padding: 100;
+}
+
+span {
+    color:#EFBD80;
+}
+
+/* ----------navigation---------- */
+nav{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    z-index: 1;
+}
+
+.menu li{
+    list-style: none;
+}
+
+.menu li a{
+    color: var(--moss);
+    text-decoration: none;
+    font-family: var(--font-serif);
+    font-weight: 600;
+    font-size: 1.5em;
+    display: block;
+    padding: 20px 30px;
+    line-height: 1;
+}
+
+.menu li a:hover{
+    color: #EFBD80;
+    transition: 0.5s;
+}
+
+.hamburger{
+    position: absolute;
+    width: 30px;
+    height: 4px;
+    background: var(--moss);
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 2;
+    transition: 0.5s;
+}
+
+.hamburger:before, .hamburger:after{
+    content:"";
+    position: absolute;
+    height: 4px;
+    right: 0;
+    background: var(--moss);
+    border-radius: 10px;
+}
+
+.hamburger:before{
+    top: -10px;
+    width: 20px;
+}
+
+.hamburger:after{
+    top: 10px;
+    width: 25;
+}
+
+.toggle-menu{
+    position: absolute;
+    width: 30px;
+    height: 100%;
+    z-index: 3;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.hamburger, .toggle-menu{
+    display: none;
+}
+
+.navbar input:checked ~ .hamburger:before{
+    top: 0;
+    transform: rotate(-45deg);
+    width: 30px;
+    background-color: var(--cream);
+}
+
+.navbar input:checked ~ .hamburger:after{
+    top: 0;
+    transform: rotate(45deg);
+    width: 30px;
+    background-color: var(--cream);
+}
+
+.navbar input:checked ~ .menu{
+    right: 0;
+}
+
+/* hamburger menu for tablet/mobile sizes for easier navigation */
+@media (max-width: 926px){
+    .hamburger, .toggle-menu{
+        display: block;
+    }
+    .navbar{
+        padding: 40px;
+    }
+    .menu{
+        justify-content: start;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        background: var(--moss);
+        width: 100%;
+        height: 100vh;
+        padding-top: 150px;
+        transition: 0.5s;
+    }
+    .menu li a{
+        color: var(--cream);
+        font-size: 3em;
+        padding: 30px;
+    }
+}
+
+/* ----------footer---------- */
+footer{
+    background-color: var(--moss);
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+
+footer h4{
+    font-size: 18px;
+    padding: 5px;
+    padding-bottom: 5px;
+    color: var(--cream);
+    font-weight: 600;
+}
+
+footer section{
+    padding: 25px;
+}
+
+footer a{
+    color: var(--cream);
+    padding-left: 5px;
+}
+
+/* ----------homepage, fun work---------- */
+.intro section{
+    display: flex;
+    justify-content: center;
+}
+
+.introimg{
+    margin-top: -20px;
+}
+
+img.introimg, img.introtext {
+    width: 400px;
+}
+
+.introtext{
+    margin-top: -130px;
+    padding: 20px;
+    margin-bottom: -50px;
+}
+
+h3{
+    font-family: var(--font-bold);
+    font-weight: 400;
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 0px;
+    color: var(--charcoal);
+}
+
+.arrow h3{
+    margin-top: 0px;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+.casestudies section, .funwork section{
+    display: flex;
+    justify-content: center;
+}
+
+.funwork, .casestudies, .intro {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    justify-items: center;
+    margin: 30px
+}
+
+.casestudies h2, .funwork h2{
+    font-family: var(--font-bold);
+    font-weight: 400;
+    font-size: 1.5em;
+    color: var(--charcoal);
+    margin-top: 3px;
+    margin-bottom: 30px;
+}
+
+.casestudies img, .funwork img{
+    width: 100%;
+    height: auto;
+    max-width: 350px;
+    border-radius: 15px;
+}
+
+.funworkintro section{
+    display:flex;
+    align-content: center;
+}
+
+.funworkintro h1{
+    font-family: var(--font-bold);
+    text-align: center;
+    font-size: 2em;
+    margin: 40px auto;
+}
+
+@media (min-width: 768px) {
+    .casestudies {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+        display: flex;
+        justify-content: center;
+    }
+    .funwork {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .intro{
+        grid-template-columns: repeat(2, 1fr);
+        display: flex;
+        justify-content: center;
+    }
+    img.introimg, img.introtext {
+        width: 100%;
+    }
+    img.introtext {
+        margin-left: -50px;
+    }
+    .introtext {
+        margin-top: 0px;
+    }
+    .casestudies img {
+        max-width: 600px;
+    }
+}
+@media (min-width: 1280px) {
+    .funwork {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* case study 1, case study 2, and all fun projects css */
+
+.casestudy img, video{
+    width: 100%;
+}
+
+.casestudy h2{
+    font-family: var(--font-bold);
+    font-size: 2.25em;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.casestudyinfo h3{
+    text-align: left;
+    font-size: 1.5em;
+    color:#666E2F;
+    margin-left: 30px;
+}
+
+.casestudymain h3{
+    text-align: left;
+    font-size: 1.75em;
+    color:#666E2F;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+.casestudymain h4{
+    font-family: var(--font-bold);
+    text-align: left;
+    font-size: 1.5em;
+    color:#252525;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+p{
+    margin: 0px 30px 20px 30px;
+}
+
+.casestudy ul li{
+    list-style: inside;
+    margin: 0px 30px 10px 30px;
+}
+
+.casestudy img, video{
+    padding: 10px 30px;
+}
+
+.notice h3{
+    text-align: center;
+    margin: 30px;
+}
+
+.funwork video{
+    padding: 10px 30px;
+}
+
+@media (min-width: 1020px) {
+    .casestudyinfo h3{
+        text-align: left;
+        font-size: 1.5em;
+        color:#666E2F;
+        margin-left: 75px;
+    }
+    
+    .casestudymain h3{
+        text-align: left;
+        font-size: 1.75em;
+        color:#666E2F;
+        margin-left: 75px;
+        margin-top: 30px;
+    }
+    
+    .casestudymain h4{
+        font-family: var(--font-bold);
+        text-align: left;
+        font-size: 1.5em;
+        color:#252525;
+        margin-left: 75px;
+        margin-top: 10px;
+    }
+    
+    .casestudy p{
+        margin: 0px 75px 20px 75px;
+    }
+
+    .casestudy ul li{
+        list-style: inside;
+        margin: 0px 75px 10px 75px;
+    }
+    
+    .casestudy img, video{
+        padding: 10px 75px;
+    }
+    
+    .notice h3{
+        text-align: center;
+        margin: 75px;
+    }
+    
+    .casestudy video{
+        padding: 10px 75px;
+    }
+
+    .cafecloverimgs {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0;
+    }
+
+    .animatedgifsimgs {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+/* about page css */
+
+.about {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 10px;
+    align-items: center;
+}
+.aboutimg {
+    width: 100%;
+}
+
+.about h3{
+    color: #666E2F;
+    margin: -10px 30px 10px 30px;
+}
+
+.contact{
+    margin: 25px;
+}
+
+.contact a{
+    color: var(--moss);
+    padding: 0px 5px;
+    font-size: 1.5em;
+}
+
+.button{
+    color: var(--cream);
+    background-color: var(--moss);
+    border: none;
+    border-radius: 15px;
+    font-family: var(--font-bold);
+    text-align: center;
+    font-size: 1.25em;
+    padding: 5px 15px;
+    margin-left: 30px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.resume h4{
+    text-align: left;
+    font-family: var(--font-bold);
+    font-size: 1.75em;
+    color:#666E2F;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+.resume h5{
+    text-align: left;
+    font-family: var(--font-serif);
+    font-size: 1em;
+    margin: 5px 30px;
+}
+
+.resume ul{
+    margin: 5px 30px 30px 20px;
+}
+
+.resume ul li{
+    list-style: inside;
+    margin: 0px 30px 5px 30px;
+}
+
+.resume p{
+    margin: 0px 30px;
+}
+
+@media (min-width: 768px) {
+
+.about {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 75px;
+    align-items: center;
+}
+
+.about h3{
+    font-size: 2.5rem;
+}
+}
+
+@media (min-width: 1280px) {
+.about h3{
+        font-size: 3rem;
+}
+
+}
