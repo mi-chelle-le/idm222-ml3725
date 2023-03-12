@@ -11,6 +11,14 @@
 
     --font-serif: "Poppins", "Montserrat", Verdana, Tahoma, serif;
     --font-bold: "Staatliches", var(--font-serif);
+
+    font-size: 1.1rem;
+}
+
+@media (min-width: 1280px) {
+    :root {
+        font-size: 1.2rem;
+    }
 }
 
 * {
@@ -64,7 +72,7 @@ nav{
     text-decoration: none;
     font-family: var(--font-serif);
     font-weight: 600;
-    font-size: 1.5em;
+    font-size: 1.4rem;
     display: block;
     padding: 20px 30px;
     line-height: 1;
@@ -159,7 +167,7 @@ nav{
     }
     .menu li a{
         color: var(--cream);
-        font-size: 3em;
+        font-size: 3rem;
         padding: 30px;
     }
 }
@@ -168,11 +176,10 @@ nav{
 footer{
     background-color: var(--moss);
     padding-bottom: 10px;
-    margin-top: 10px;
+    margin-top: 50px;
 }
 
 footer h4{
-    font-size: 18px;
     padding: 5px;
     padding-bottom: 5px;
     color: var(--cream);
@@ -186,6 +193,8 @@ footer section{
 footer a{
     color: var(--cream);
     padding-left: 5px;
+    padding-right: 25px;
+    font-size: 1.3rem;
 }
 
 /* ----------homepage, fun work---------- */
@@ -211,7 +220,7 @@ img.introimg, img.introtext {
 h3{
     font-family: var(--font-bold);
     font-weight: 400;
-    font-size: 2em;
+    font-size: 2rem;
     text-align: center;
     margin-bottom: 0px;
     color: var(--charcoal);
@@ -220,7 +229,7 @@ h3{
 .arrow h3{
     margin-top: 0px;
     margin-bottom: 20px;
-    font-size: 1.5em;
+    font-size: 1.5rem;
 }
 
 .casestudies section, .funwork section{
@@ -239,7 +248,7 @@ h3{
 .casestudies h2, .funwork h2{
     font-family: var(--font-bold);
     font-weight: 400;
-    font-size: 1.5em;
+    font-size: 1.5rem;
     color: var(--charcoal);
     margin-top: 3px;
     margin-bottom: 30px;
@@ -248,8 +257,59 @@ h3{
 .casestudies img, .funwork img{
     width: 100%;
     height: auto;
-    max-width: 350px;
+    max-width: 300px;
     border-radius: 15px;
+}
+
+.case-study-card, .fun-card {
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    max-width: 350px;
+}
+
+.fun-card {
+    padding-left: 50px;
+    padding-right: 50px;
+    max-width: 1100px;
+    margin: 0 25px;
+}
+
+.case-study-card h2, .fun-card h2 {
+    margin: 0;
+    margin-bottom: 12px;
+}
+
+.funworktn {
+    text-align: center;
+    max-width: 300px;
+    display: flex;
+    align-items: center;
+}
+
+.funworktn img {
+    margin: auto;
+    display: block;
+    display: flex;
+    align-content: center;
+    margin-bottom: 10px;
+}
+
+.view-more {
+    background-color: #666E2F;
+    padding: 8px 12px;
+    text-decoration: none;
+    font-family: var(--font-bold);
+    color:#fefaf6;
+    border-radius: 25px;
+}
+
+.view-more:hover {
+    background-color: #EFBD80;
+    color: #fefaf6;
+    transition: 0.5s;
 }
 
 .funworkintro section{
@@ -260,7 +320,7 @@ h3{
 .funworkintro h1{
     font-family: var(--font-bold);
     text-align: center;
-    font-size: 2em;
+    font-size: 2rem;
     margin: 40px auto;
 }
 
@@ -271,12 +331,17 @@ h3{
         display: flex;
         justify-content: center;
     }
+
     .funwork {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 75%);
+        justify-content: center;
+        max-width: 1280px;
         gap: 50px;
-        justify-content: space-evenly;
-        align-items: center;
+        margin: auto;
+        padding-left: 50px;
+        padding-right: 50px;
     }
+
     .intro{
         grid-template-columns: repeat(2, 1fr);
         display: flex;
@@ -292,20 +357,42 @@ h3{
         margin-top: 0px;
     }
     .casestudies img {
+        max-width: 450px;
+    }
+    .case-study-card{
         max-width: 600px;
     }
-}
-@media (min-width: 1280px) {
-    .funwork {
-        grid-template-columns: repeat(3, 1fr);
+
+    .case-study-container  {
+        margin: auto;
+        padding: 0 10px;
     }
+
+    .fun-card {
+        display: grid;
+        grid-template-columns: 60% 40%;
+        margin: auto;
+        padding-right: 25px;
+        padding-left: 25px;
+        height: 100%;
+        width: 100%;
+        max-width: 650px;
+    }
+
+    .funworktn {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media (min-width: 1020px) { 
+    .funwork {
+        grid-template-columns: repeat(2, 1fr);
+}
 }
 
 /* case study 1, case study 2, and all fun projects css */
-
-.casestudyheader img{
-    width: 100%;
-}
 
 .casestudy img, video{
     width: 100%;
@@ -313,7 +400,7 @@ h3{
 
 .casestudy h2{
     font-family: var(--font-bold);
-    font-size: 2.25em;
+    font-size: 2.25rem;
     text-align: center;
     margin-bottom: 20px;
     margin-top: 10px;
@@ -321,14 +408,19 @@ h3{
 
 .casestudyinfo h3{
     text-align: left;
-    font-size: 1.5em;
+    font-size: 1.5rem;
     color:#666E2F;
     margin-left: 30px;
 }
 
+.casestudyinfo, .casestudymain {
+    max-width: 900px;
+    margin: auto;
+}
+
 .casestudymain h3{
     text-align: left;
-    font-size: 1.75em;
+    font-size: 1.75rem;
     color:#666E2F;
     margin-left: 30px;
     margin-top: 30px;
@@ -337,7 +429,7 @@ h3{
 .casestudymain h4{
     font-family: var(--font-bold);
     text-align: left;
-    font-size: 1.5em;
+    font-size: 1.5rem;
     color:#252525;
     margin-left: 30px;
     margin-top: 10px;
@@ -365,33 +457,37 @@ p{
     padding: 10px 30px;
 }
 
+.casestudyheader img{
+    width: 100%;
+}
+
 @media (min-width: 1020px) {
     .casestudyinfo h3{
         text-align: left;
-        font-size: 1.5em;
+        font-size: 1.5rem;
         color:#666E2F;
-        margin-left: 75px;
+        margin-left: 15px;
     }
     
     .casestudymain h3{
         text-align: left;
-        font-size: 1.75em;
+        font-size: 1.75rem;
         color:#666E2F;
-        margin-left: 75px;
+        margin-left: 15px;
         margin-top: 30px;
     }
     
     .casestudymain h4{
         font-family: var(--font-bold);
         text-align: left;
-        font-size: 1.5em;
+        font-size: 1.5rem;
         color:#252525;
-        margin-left: 75px;
+        margin-left: 15px;
         margin-top: 10px;
     }
     
     .casestudy p{
-        margin: 0px 75px 20px 75px;
+        margin: 0px 75px 20px 15px;
     }
 
     .casestudy ul li{
@@ -414,13 +510,32 @@ p{
 
     .cafecloverimgs {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         gap: 0;
     }
 
     .animatedgifsimgs {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .casestudy img, .casestudy video {
+        padding: 10px 15px;
+    }
+
+    .casestudy ul li{
+        margin: 0px 30px 10px 15px;
+    }
+
+    .two-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .catrunimg1 {
+        margin-top: 20px;
+        margin-bottom: 35px;
     }
 
 }
@@ -449,7 +564,8 @@ p{
 .contact a{
     color: var(--moss);
     padding: 0px 5px;
-    font-size: 1.5em;
+    font-size: 1.6rem;
+    margin-right: 20px;
 }
 
 .button{
@@ -459,17 +575,22 @@ p{
     border-radius: 15px;
     font-family: var(--font-bold);
     text-align: center;
-    font-size: 1.25em;
+    font-size: 1.25rem;
     padding: 5px 15px;
     margin-left: 30px;
     cursor: pointer;
     text-decoration: none;
 }
 
+.button:hover {
+    background-color: var(--honey);
+    transition: 0.5s;
+}
+
 .resume h4{
     text-align: left;
     font-family: var(--font-bold);
-    font-size: 1.75em;
+    font-size: 1.75rem;
     color:#666E2F;
     margin-left: 30px;
     margin-top: 30px;
@@ -478,7 +599,7 @@ p{
 .resume h5{
     text-align: left;
     font-family: var(--font-serif);
-    font-size: 1em;
+    font-size: 1rem;
     margin: 5px 30px;
 }
 
