@@ -508,10 +508,8 @@ p{
         padding: 10px 75px;
     }
 
-    .cafecloverimgs {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 0;
+    .cc-menu {
+        grid-column: span 2;
     }
 
     .animatedgifsimgs {
@@ -536,6 +534,10 @@ p{
     .catrunimg1 {
         margin-top: 20px;
         margin-bottom: 35px;
+    }
+
+    .beeprojectvideo {
+        max-width: 450px;
     }
 
 }
